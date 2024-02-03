@@ -1,0 +1,43 @@
+// Arrays
+const arr1 = [1,2,3,4,5]
+const arr2 = ["Prayag","Ganga","Mansi","Himanshu"]
+
+Operations :
+1. push(value) - insert value at end
+2. pop() - remove last element
+3. unshift(value) - insert value at start                           * not recommended bcz of optimization, change index of all the elements.
+4. shift() - remove first value                                     * not recommended bcz of optimization, change index of all the elements.
+5. includes(value) - check if value present or not (bool)
+6. indexOf(value) - return index of value if present, otherwise -1 (int)
+7. join() - converts array into string, seperated by a comma
+8. slice(index1, index2) - returns a piece of the array but it doesn't affect the original array, index2 not included
+9. splice(index1, index2) - changes the original array by removing, replacing, or adding values and returns the affected values.
+10. concat(array1, array2, ...) - used to merge two or more arrays. push problem is solved here. Does not change existing array.
+11. spread operator -
+    let parts = ['four', 'five'];
+    let numbers = ['one', 'two', 'three'];
+    console.log([...numbers, ...parts]);
+12. flat(depth or 'Infinity') - returns a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+13. Array.isArray("Himanshu") - checks if given value is array or not, return false in this case.
+14. Array.from("Himanshu") - Creates an array from an iterable object.
+
+
+
+// Note 1 : If we push array1 in array2, then that array2 will be push at last index, then we have to access those elements like this
+arr1.push(arr2)
+// Output : [1,2,3,4,5,["Prayag","Ganga","Mansi","Himanshu"]]
+console.log(arr1[5][3])     // to access Himanshu
+
+// Note 2 : Difference btw spread operator and concat function
+a = [1, 2, 3]
+x = 'hello';
+console.log(a.concat(x));  // [ 1, 2, 3, 'hello' ]
+console.log([...a, ...x]); // [ 1, 2, 3, 'h', 'e', 'l', 'l', 'o' ]
+
+// Note 3 : Converting object to an array
+const obj = {
+    name : "Himanshu", 
+    uid : "21BCS7367"
+}
+console.log(Array.from(Object.keys(obj)))       // Output : [name, uid]
+console.log(Array.from(Object.values(obj)))     // Output : ['Himanshu','21BCS7367']
