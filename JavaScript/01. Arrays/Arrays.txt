@@ -65,4 +65,3 @@ const uid1 = '21BCS7367'
 const uid2 = '21BCS7687'
 const uid3 = '21BCS7881'
 console.log(Array.of(uid1,uid2,uid3))        // Output : ['21BCS7367','21BCS7687','21BCS7881']
-
