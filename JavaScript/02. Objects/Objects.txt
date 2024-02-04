@@ -1,1 +1,31 @@
-Hello World
+// Objects
+
+Objects can be declared in two ways :-
+1. Literals - Not Singleton, multiple instances of an object.
+// Implementation :
+const obj = {
+  name : "Himanshu",                  // By default Babel treats key as string literals i.e. name as "name", age as "age"
+  age : 22
+}
+
+2. Constructor - Singleton, only one copy of an object.
+// Implementation
+const obj = Object.create(null)
+
+There are two ways to access keys and value inside an object :-
+const obj = {
+  name : "Himanshu Oli",
+  age : 22,
+  comitted : false
+}
+1. console.log(obj.name)                     // Dot notation is more concise and easier to read.
+2. console.log(obj["name"])                  // Bracket notation is more versatile.
+
+Note : One difference between dot notation and bracket notation -
+const obj = {
+  "full name" : "Himanshu Oli",
+  age : 22,
+  uid : "21BCS7367"
+}
+console.log(obj.full name)                 // Cannot access using dot notation
+console.log(obj["full name"])              // Correct Way
