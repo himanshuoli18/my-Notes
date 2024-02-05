@@ -51,7 +51,53 @@ Note : const x = StudentDetails;  // Will not create a copy of person.
 The object x is not a copy of StudentDetails. Both x and StudentDetails refers to the same object.
 If we change property of x, it will also change property of StudentDetails.
 
-**for...in Loop**
+Note : for...in Loop :
+    for (let variable in object) {
+        // code to be executed
+    }
+    const studentDetails = {
+        name : "Himanshu Oli",
+        age : 22,
+        uid : "21BCS7367"
+    }
+    for (let i in studentDetails) {
+        console.log(studentDetails[i]);
+    }
+    // Output : Himanshu Oli
+                22
+                21BCS7367
+
+Deleting Properties :
+    Two ways of deleting a property inside object -
+    1. delete object.propertyName;
+    2. delete object["propertyName"];
+    Note : The delete operator should not be used on predefined JavaScript object properties. It can crash your application.
+
+Nested Objects :
+    const myObj = {
+        name : "Himanshu Oli",
+        age : 22,
+        cars : {
+            car1:"Ford",
+            car2:"BMW",
+            car3:"Jaguar"
+        }
+    }
+    myObj.cars.car3;        // Output : Jaguar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
