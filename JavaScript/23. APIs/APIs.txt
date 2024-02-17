@@ -1,0 +1,16 @@
+APIs - A set of rules and specifications that allow one program to interact with another.
+
+Earlier API values comes in XML structure which is complex
+Now-a-days JSON structure is used, which is easy as compared to xml.
+
+// JSON File
+{
+  "name":"Himanshu",
+  "age":22,
+  "single":true
+}
+
+// Famous API - https://randomuser.me/ (Name : RandomUser me API)
+
+We can understand the JSON file with JSON Formatter :
+https://jsonformatter.org/
