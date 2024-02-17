@@ -1,0 +1,21 @@
+// this - refer to current context
+
+Earlier Javascript only runs on browser. On browser, Window object is the global object. So that's why it shows Window object when we look on browser.
+Now a days, we can run JavaScript stand alone. So, in node environment 'this' refer to {} empty object. So that's why it shows {} empty object when we look on console.
+
+const user = {
+    name : "Himanshu Oli",
+    price : 1999,
+    welcomeMessage : function() {
+        console.log(`Welcome ${this.name}!`);
+        console.log(this)
+    }
+} 
+
+user.welcomeMessage()
+user.name = "Mansi Oli"
+user.welcomeMessage()
+
+console.log(this)
+
+// Note :- We can only use 'this' keyword inside objects, not inside functions.
