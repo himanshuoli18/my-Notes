@@ -1,0 +1,13 @@
+var a = 10;            // Global variable
+let b = 20;            // Scope variable
+const c = 30;          // Scope variable
+
+function addTwoNumbers(num1,num2) {
+    return num1+num2
+}
+console.log(addTwoNumbers(18,7))                                        // If we put this line at top then also it will work bcz of hoisting, bcz this is function.
+
+const addThreeNumbers = function(num1, num2, num3) {
+    return num1+num2+num3
+}
+console.log(addThreeNumbers(18,7,5))                                    // If we put this line at top, it will give error, bcz this is expression.
