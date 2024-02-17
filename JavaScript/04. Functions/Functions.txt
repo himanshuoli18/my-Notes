@@ -1,1 +1,9 @@
+function helloWorld() {
+    console.log("Hello World!")
+}
+for (let i = 0; i < 10; i++) {
+    helloWorld                  // Reference
+    helloWorld()                // Execution
+}
 
+// Rest Operator :  Allows a function to take an indefinite number of arguments and bundle them in an array
