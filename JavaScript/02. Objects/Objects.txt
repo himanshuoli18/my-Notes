@@ -95,13 +95,83 @@ Ans :   1. In an object method, this refers to the object.
         5. In an event, this refers to the element that received the event.
         6. Methods like call(), apply(), and bind() can refer this to any object.
 
+// Using Symbol inside an object
+const mySym = Symbol("myKey1")
+const studentDetails = {
+    name : "Himanshu",
+    [mySym] : "myKey1",
+    age : 22,
+    uid : "21BCS7367",
+    "e mail" : "himanshuoli18012003@gmail.com"
+}
+console.log(studentDetails[mySym]);
+console.log(studentDetails);
+studentDetails["e mail"] = "himanshuoliofficial@gmail.com"
+Object.freeze(studentDetails)                                                            // freeze method fix the values of object and do not allow updation, it will not give error but it will not upgrade.
+console.log(studentDetails);
 
+// Optional Chaining (?) - if obj not present just show undefined rather than giving an error.
+const websiteUser = {
+    name : {
+        firstname : "Himanshu",
+        lastname : "Oli"
+    },
+    age : 22
+}
+console.log(websiteUser.fullname?.firstname);
+console.log(websiteUser.fullname?.lastname);
 
+// assign method
+const obj1 ={
+    1:"Prayag Datt",
+    2:"Ganga Devi"
+}
+const obj2 = {
+    3:"Himanshu Oli",
+    4:"Mansi Oli"
+}
+const obj3 = Object.assign({},obj1, obj2)                // values of obj1 and obj2 will go to {} instead of obj1.
 
+console.log(obj1);
+console.log(obj2);
+console.log(obj3);
 
+// Object inside an Array
+const usersData = [
+    {
+        id:101,
+        name:"Prayag Datt"
+    },
+    {
+        id:102,
+        name:"Ganga Devi"
+    },
+    {
+        id:103,
+        name:"Mansi Oli"
+    },
+    {
+        id:104,
+        name:"Himanshu Oli"
+    }
+]
 
+console.log("ID : "+ usersData[1].id +"\nName : "+ usersData[1].name)
+console.log(usersData)
 
-
+// Object De-structuring
+const course = {
+    courseName : "JavaScript Advance",
+    coursePrice : 999,
+    courseSyllabus : {
+        1:"Basics",
+        2:"Objects",
+        3:"Events",
+        4:"DOM Manipulation"
+    }
+}
+const {courseName:Name, coursePrice:Price, courseSyllabus:Syllabus} = course
+console.log("Course Name : "+Name+"\nCourse Price : "+Price+"\nCourse Syllabus : "+Syllabus);
 
 
 
