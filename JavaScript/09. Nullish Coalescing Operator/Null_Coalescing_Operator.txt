@@ -1,0 +1,9 @@
+Nullish Coalescing Operator (??) : null undefined
+
+let val1 = 10 ?? 15                      // Output : 10
+let val2 = null ?? function_call()       // If function is returned then it is stored in val2, otherwise null will be stored, it wil not give error.
+
+It is new operator and mainly it works for database functionalities like database connection, if connected then return connection otherwise return null.
+
+let val3 = null ?? function_call_1() ?? function_call_2() ?? function_call_3()          // It will accept first vale which is returned and ignore rest
+Eg :- let val4 = null ?? 10 ?? 20 ?? 30 ?? 40          // Output : 10
