@@ -1,0 +1,23 @@
+JavaScript is single threaded, here everything is a process.
+
+Thre are three types of Execution Context :-
+1. Global Execution Context.
+2. Function Execution Context.
+3. Eval Execution Context.
+
+JavaScipt code runs on 2 phases :-
+  -> Memory Creation Phase
+  -> Execution Phase
+
+Example :-
+let var1 = 10
+let var2 = 5
+function addNumbers(num1, num2){
+  let total = num1+num2
+  return total
+}
+let result1 = addNumbers(val1, val2)
+let result2 = addNumbers(10, 2)
+
+Steps :-
+  1. Execution Context/Environment
