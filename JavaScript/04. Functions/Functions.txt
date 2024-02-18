@@ -25,4 +25,5 @@ Note : If function wrapperd in {} then we have to use return keyword for returni
 
 // Note :- We can't return objects with {} inside a function, we have to use ().
 Example -
-
+const userData = () => ({username : "Himanshu"})
+console.log(userData)
