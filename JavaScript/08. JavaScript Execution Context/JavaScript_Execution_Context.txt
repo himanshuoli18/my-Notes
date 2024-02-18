@@ -20,4 +20,80 @@ let result1 = addNumbers(val1, val2)
 let result2 = addNumbers(10, 2)
 
 Steps :-
-  1. Execution Context/Environment
+  1. Execution Context/Environment :
+      -> this
+
+  2. Memory Phase :
+      ⦿ var1 = undefined
+      ⦿ var2 = undefined
+      ⦿ addNumbers = defination
+      ⦿ result1 = undefined
+      ⦿ result2 = undefined
+
+  3. Execution Phase :
+      ⦿ var1 <- 10
+      ⦿ var1 <- 5
+      ⦿ addNumbers ---------------------------------->   ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜    <- New Execution Context
+      ⦿ result1 = 15                                     ⬜                      ⬜
+      ⦿ addNumbers -----                                 ⬜    New variable      ⬜
+      ⦿ result2 = 12   |                                 ⬜     environment      ⬜
+                        |                                 ⬜          +           ⬜
+                        |                                 ⬜     Execution        ⬜    <- This Execution Context will delete after its use
+                        |                                 ⬜      Thread          ⬜
+                        |                                 ⬜                      ⬜
+                        |                                 ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
+                        |                                              |
+                        |                                              |
+                        |                                              |
+                        ↓                                              |----> 1. Memory Phase :
+            ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜  <- New Execution Context                 ⦿ val1 = undefined
+            ⬜                      ⬜                                            ⦿ val2 = undefined
+            ⬜    New variable      ⬜                                            ⦿ total = undefined
+            ⬜     environment      ⬜
+            ⬜          +           ⬜                                       2. Execution Phase :
+            ⬜     Execution        ⬜                                            ⦿ num1 = 10
+            ⬜      Thread          ⬜                                            ⦿ num2 = 5
+            ⬜                      ⬜                                            ⦿ total = 15   [This value will return to Global Context]
+            ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜                                                               
+                      |                                                           
+                      |                                                          
+                      |---> 1. Memory Phase :
+                                ⦿ val1 = undefined
+                                ⦿ val2 = undefined
+                                ⦿ total = undefined
+                                                                                 
+                            2. Execution Phase :
+                                ⦿ num1 = 10
+                                ⦿ num1 = 2
+                                ⦿ total = 12          [This value will return to Global Context]
+
+                                                                                 
+
+                        
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
