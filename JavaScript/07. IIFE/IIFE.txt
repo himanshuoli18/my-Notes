@@ -1,0 +1,13 @@
+IIFE - Immediately Invoked Function Expression
+
+This is used to seperate our block of code from global variables pollution.
+
+// Named IIFE
+(function databaseConnection() {
+    console.log(`DATABASE CONNECTED`)
+})();
+
+// Anonymous IIFE
+(() => {
+    console.log(`DATABASE CONNECTED`)
+})();
