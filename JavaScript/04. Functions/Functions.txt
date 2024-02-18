@@ -11,6 +11,18 @@ for (let i = 0; i < 10; i++) {
 // Arrow Functions :-
 () => {}
 
-const addTwoNumbers = () => {
-    return 
+const addTwoNumbers = (num1, num2) => {
+    return num1+num2
 }
+console.log(addTwoNumbers(3,5))                    // Output : 8
+
+const addThreeNumbers = (num1, num2, num3) => (num1+num2+num3)
+console.log(addThreeNumbers(4,6,7))
+
+Note : If function wrapperd in {} then we have to use return keyword for returning a value. But if function is written in () then we can directly return the value. 
+{} - multi line functions                 // Explicit return
+() - single line functions                // implicit return
+
+// Note :- We can't return objects with {} inside a function, we have to use ().
+Example -
+
