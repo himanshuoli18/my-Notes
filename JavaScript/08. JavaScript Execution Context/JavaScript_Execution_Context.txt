@@ -33,20 +33,20 @@ Steps :-
   3. Execution Phase :
       ⦿ var1 <- 10
       ⦿ var1 <- 5
-      ⦿ addNumbers ---------------------------------->   ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜    <- New Execution Context
+      ⦿ addNumbers ---------------------------------->   ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜    <- New Execution Context
       ⦿ result1 = 15                                     ⬜                      ⬜
       ⦿ addNumbers -----                                 ⬜    New variable      ⬜
-      ⦿ result2 = 12   |                                 ⬜     environment      ⬜
-                        |                                 ⬜          +           ⬜
-                        |                                 ⬜     Execution        ⬜    <- This Execution Context will delete after its use
-                        |                                 ⬜      Thread          ⬜
-                        |                                 ⬜                      ⬜
-                        |                                 ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
+      ⦿ result2 = 12    |                                ⬜     environment      ⬜
+                        |                                ⬜          +           ⬜
+                        |                                ⬜     Execution        ⬜    <- This Execution Context will delete after its use
+                        |                                ⬜      Thread          ⬜
+                        |                                ⬜                      ⬜
+                        |                                ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
                         |                                              |
                         |                                              |
                         |                                              |
                         ↓                                              |----> 1. Memory Phase :
-            ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜  <- New Execution Context                 ⦿ val1 = undefined
+            ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜  <- New Execution Context                 ⦿ val1 = undefined
             ⬜                      ⬜                                            ⦿ val2 = undefined
             ⬜    New variable      ⬜                                            ⦿ total = undefined
             ⬜     environment      ⬜
@@ -54,7 +54,7 @@ Steps :-
             ⬜     Execution        ⬜                                            ⦿ num1 = 10
             ⬜      Thread          ⬜                                            ⦿ num2 = 5
             ⬜                      ⬜                                            ⦿ total = 15   [This value will return to Global Context]
-            ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜                                                               
+            ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜                                                             
                       |                                                           
                       |                                                          
                       |---> 1. Memory Phase :
